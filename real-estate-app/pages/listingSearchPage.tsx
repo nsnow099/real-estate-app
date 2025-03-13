@@ -7,7 +7,10 @@ export default function ListingSearchPage() {
 
     return (
         <>
-
+            {/* header component */}
+            <body>
+                {/* search, filters and button to switch between map/gallery*/}
+            </body>
         </>
     )
 }
