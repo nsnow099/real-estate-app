@@ -16,17 +16,6 @@
   font-family: var(--font-geist-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
-}
-
 .main {
   display: flex;
   flex-direction: column;
@@ -89,7 +78,7 @@ a.primary {
 
 a.secondary {
   border-color: var(--gray-alpha-200);
-  min-width: 180px;
+  min-width: 158px;
 }
 
 .footer {
@@ -107,6 +96,7 @@ a.secondary {
 .footer img {
   flex-shrink: 0;
 }
+
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
@@ -161,8 +151,4 @@ a.secondary {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-}
+
