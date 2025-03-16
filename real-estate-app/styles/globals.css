@@ -1,5 +1,5 @@
 :root {
-  --background: #ffffff;
+  --background: #dadada;
   --foreground: #171717;
 }
 
@@ -26,4 +26,9 @@ body {
 a {
   color: #0000EE;
   text-decoration: underline;
+}
+
+main {
+  margin: 1rem 3rem 1rem 3rem;
+  overflow:hidden;
 }

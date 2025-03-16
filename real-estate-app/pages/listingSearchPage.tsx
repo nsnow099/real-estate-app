@@ -1,6 +1,8 @@
 import styles from "@/styles/Home.module.css";
-
+import "@/styles/listingSearchPage.css";
 import ListingsMap from "@/components/listingsMap"
+import ListingPageControls from "@/components/listingPageControls";
+
 /**
  * Both map view and gallery view will be on this page. User can switch between them without changing pages.
  * Filters should remain untouched during switch.
@@ -10,11 +12,18 @@ export default function ListingSearchPage() {
     return (
         
             
-        <body>
-            {/* header component */}
+        <div>
+            <div style={{height:'60px'}}>
+                {/* header component */}
+            </div>
+            
 
             <main className={styles.main}>
-                {/* search, filters and button to switch between map/gallery*/}
+                <div>
+                    {/* search, filters and button to switch between map/gallery*/}
+                    <ListingPageControls></ListingPageControls>
+                </div>
+                
 
                 <ListingsMap></ListingsMap>
             </main>
@@ -22,7 +31,7 @@ export default function ListingSearchPage() {
             <footer className={styles.footer}>
         
             </footer>
-        </body>
+        </div>
         
     )
 }

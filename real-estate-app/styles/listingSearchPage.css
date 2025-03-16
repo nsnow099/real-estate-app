@@ -1,0 +1,98 @@
+.controls {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-button {
+    display: inline-block; 
+    background-color: #47A4EC;
+    border: none;
+    height: 100%;
+    position: relative;
+    width: 35px;
+}
+
+.filter-icon {
+    position: relative;
+    font-size: 15px;
+    left: 2px;
+    top: 1.5px
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+}
+
+.search-filter-group {
+    display: inline-flex;
+    width: 500px;
+    height: 100%;
+    border-radius: 45;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgb(178, 187, 196);
+}
+
+.search-field {
+    display: inline-block;
+    position: relative;
+    width: 80%;
+    height: 100%;
+    vertical-align: top;
+    flex: 1;
+}
+
+.search-input {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.saved-searches {
+    display: inline-block;
+    height: 100%;
+    margin-inline-start: 20px;
+}
+
+.saved-searches-dropdown {
+    display: inline-block;
+    height: 100%;
+    width: 150px;
+}
+
+.listings-map {
+    width: max-content;
+}
+
+.view-control {
+    display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+    width: 150px;
+    height: 100%;
+    background-color: white;
+    border-radius: 45;
+    z-index: 0;
+    
+}
+
+.view-control-button-active {
+    position: relative;
+    height: 100%;
+    width: 55%;
+    background-color: #47A4EC;
+    border-radius: 45;
+    border: none;
+    box-shadow: 1px 0px 2px rgb(178, 187, 196);
+}
+
+.view-control-button-inactive {
+    height: 100%;
+    width: 55%;
+    background-color: white;
+    border-radius: 45;
+    border: none;
+    margin-left: -15px;
+}
