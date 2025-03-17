@@ -3,7 +3,7 @@ export default function ListingsMap() {
         <>
             <iframe 
             src="https://www.google.com/maps/d/u/0/embed?mid=1rfA5HSLjHPqq60zpRHR0O_9_WV31YHg&ehbc=2E312F&noprof=1" 
-            width="1400" 
+            width="1100" 
             height="550"
             >
             </iframe>
