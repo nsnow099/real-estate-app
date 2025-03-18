@@ -1,0 +1,34 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .pageNumber, .arrow {
+    border: none;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .arrow {
+    font-size: 18px;
+    padding: 6px 10px;
+  }
+  
+  .pageNumber:hover, .arrow:hover {
+    background: #eee;
+  }
+  
+  .active {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
