@@ -1,154 +1,127 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
-}
-
-.main {
+/* General Page Styles */
+.container {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
-}
-
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #666, #222);
+  color: white;
+  font-family: Arial, sans-serif;
+  position: relative;
 }
 
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 158px;
-}
-
-.footer {
-  grid-row-start: 3;
+/* Header (Only contains Hamburger & Login) */
+.header {
+  width: 100%;
   display: flex;
-  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  padding: 10px 20px;
 }
 
-.footer a {
+/* Hamburger Menu */
+.menuIcon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Website Name Background (Moved Up Higher) */
+.websiteNameContainer {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin-top: 0px;  /* Moved Up */
+}
+
+/* Search Bar (Much Wider) */
+.searchContainer {
   display: flex;
   align-items: center;
-  gap: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 50px 0;
+  width: 600px; /* Increased Width */
 }
 
-.footer img {
-  flex-shrink: 0;
+/* Search Input */
+.searchInput {
+  flex: 1;
+  padding: 10px;
+  font-size: 18px;
 }
 
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
+/* Search Button (Fixing Color) */
+.searchButton {
+  padding: 10px 15px;
+  font-size: 16px;
+  background: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
+.searchButton:hover {
+  background: darkblue;
 }
 
+/* Circle Options (Increased Gaps Between Circles) */
+.circleOptions {
+  display: flex;
+  justify-content: space-between; /* Spreads Out Circles */
+  gap: 80px; /* Increased Gaps */
+  margin-top: 50px;
+  width: 60%;
+  text-align: center;
+}
 
+/* Circle Wrapper (Ensures Proper Text Alignment) */
+.circleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Circle Container - Ensures the image is properly inside */
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Makes it a perfect circle */
+  overflow: hidden; /* Ensures image stays inside the circle */
+  border: 2px solid white; /* Thin white border */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Image Inside the Circle */
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills the circle while cropping */
+}
+
+/* Hover Effect - Slight Zoom */
+.circle:hover {
+  transform: scale(1.1);
+}
+
+/* Labels Below Circles (Centered Properly) */
+.circleLabel {
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
