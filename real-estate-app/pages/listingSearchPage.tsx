@@ -41,7 +41,7 @@ const ListingSearchPage = () => {
                 </div>
 
                 {/* Map View */}
-                <div style={display === 'map' ? { display: 'block', width: '100px' } : { display: 'none', width: '100px' }}>
+                <div style={display === 'map' ? { display: 'block', width: '100px', marginTop:'30px' } : { display: 'none', width: '100px' }}>
                     <ListingsMap />
                 </div>
 
