@@ -8,6 +8,7 @@ import ListingPageControls from "@/components/listingPageControls";
 import FiltersPopup from "@/components/filtersPopup";
 import Pagination from "@/components/Pagination"; 
 import HamburgerMenu from "@/components/HamburgerMenu"; // Import hamburger menu
+import LoginButton from "@/components/LoginButton";
 
 const ListingSearchPage = () => {
     const router = useRouter();
@@ -27,7 +28,10 @@ const ListingSearchPage = () => {
     return ( 
         <div className={styles.pageContainer}> {/* Add this wrapper to maintain spacing */}
             {/* ✅ Hamburger Menu (Positioned Absolutely to Avoid Pushing Content) */}
-            <HamburgerMenu />
+            <header className={styles.header}>
+                <HamburgerMenu /> {/* ✅ Replaces the default icon */}
+                <LoginButton />
+            </header>
 
             <main className={styles.main}>
                 <div>

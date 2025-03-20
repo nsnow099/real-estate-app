@@ -5,6 +5,7 @@ import pageStyles from "@/styles/AnalysisTools.module.css";
 import styles from "@/styles/Home.module.css";
 import ToolsPageControls from "@/components/toolsPageControls";
 import MortgageCalculator from "@/components/mortgageCalculator";
+import LoginButton from "@/components/LoginButton";
 
 const AnalysisTools = () => {
     const router = useRouter();
@@ -26,10 +27,12 @@ const AnalysisTools = () => {
 
     return (
         <div>
-            <HamburgerMenu />
-            <div style={{ height: '60px' }}>
-                {/* header component */}
-            </div>
+            
+            <header className={styles.header}>
+                <HamburgerMenu /> {/* ✅ Replaces the default icon */}
+                <LoginButton />
+            </header>
+            <br/>
             <main className={styles.main}>
                 <ToolsPageControls display={display} setDisplay={setDisplay}></ToolsPageControls>
                 <br/>
