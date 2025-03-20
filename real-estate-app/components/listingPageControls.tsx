@@ -2,11 +2,9 @@ import { faFilter } from '@fortawesome/free-solid-svg-icons/faFilter';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons/faMagnifyingGlass';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "@/styles/listingSearchPage.css";
-import { useState } from 'react';
 import React from 'react';
 
 const ListingPageControls = ({display, setDisplay, setFiltersActive}:any) => {
-
 
     return (
         <div className='controls'>
