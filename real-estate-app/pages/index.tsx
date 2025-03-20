@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import LoginButton from "@/components/LoginButton";
+import HamburgerMenu from "@/components/HamburgerMenu"; 
 
 const HomePage = () => {
   return (
@@ -13,18 +14,18 @@ const HomePage = () => {
       <div className={styles.container}>
         {/* Top Navigation (Hamburger + Login) */}
         <header className={styles.header}>
-          <div className={styles.menuIcon}>☰</div>
+          <HamburgerMenu /> {/* ✅ Replaces the default icon */}
           <LoginButton />
         </header>
 
         {/* Website Name */}
         <div className={styles.websiteNameContainer}>
-          <h1 className={styles.title}>Website Name</h1>
+          <h1 className={styles.title}>Realest Estate</h1>
         </div>
 
         {/* Search Bar */}
         <div className={styles.searchContainer}>
-          <input type="text" placeholder="Search By" className={styles.searchInput} />
+          <input type="text" placeholder="Search by location, address or postal code" className={styles.searchInput} />
           <button className={styles.searchButton}>Find your home</button>
         </div>
 

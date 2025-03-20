@@ -1,4 +1,27 @@
+/* ✅ Ensure the Page Layout Stays Stable */
+.pageContainer {
+    position: relative; /* Keeps layout stable */
+    padding-top: 100px; /* More space for Hamburger Menu */
+}
+
+/* ✅ Fix header alignment */
+.header {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* ✅ Ensure the search bar stays spaced below */
+.searchContainer {
+    margin-top: 40px; /* More space below Hamburger Menu */
+}
+
+/* Controls for filters and search */
 .controls {
+    margin-top: 20px;
     height: 40px;
     display: flex;
     justify-content: space-between;
@@ -61,6 +84,7 @@
     width: max-content;
 }
 
+/* ✅ Ensure View Control Buttons Stay Aligned */
 .view-control {
     display: inline-block;
     position: relative;
@@ -81,6 +105,7 @@
     font-size: 90%;
 }
 
+/* ✅ Active Button States */
 .active {
     position: relative;
     background-color: #47A4EC;
@@ -117,6 +142,11 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 40px;
     border-radius: 10px;
+}
+
+/* ✅ Add Space Between Listings and Pagination */
+.listingsContainer {
+    margin-bottom: 40px; /* Prevent pagination from sticking to listings */
 }
 
 /* Saved Searches Section */

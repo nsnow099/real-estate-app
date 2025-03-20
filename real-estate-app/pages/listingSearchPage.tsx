@@ -6,7 +6,8 @@ import ListingsMap from "@/components/listingsMap";
 import ListingsGallery from "@/components/ListingsGallery";
 import ListingPageControls from "@/components/listingPageControls";
 import FiltersPopup from "@/components/filtersPopup";
-import Pagination from "@/components/Pagination"; // Import pagination
+import Pagination from "@/components/Pagination"; 
+import HamburgerMenu from "@/components/HamburgerMenu"; // Import hamburger menu
 
 const ListingSearchPage = () => {
     const router = useRouter();
@@ -24,10 +25,9 @@ const ListingSearchPage = () => {
     }, [view]);
 
     return ( 
-        <div>
-            <div style={{ height: '60px' }}>
-                {/* header component */}
-            </div>
+        <div className={styles.pageContainer}> {/* Add this wrapper to maintain spacing */}
+            {/* ✅ Hamburger Menu (Positioned Absolutely to Avoid Pushing Content) */}
+            <HamburgerMenu />
 
             <main className={styles.main}>
                 <div>
@@ -45,6 +45,7 @@ const ListingSearchPage = () => {
                     <ListingsMap />
                 </div>
 
+                {/* Filters Popup */}
                 <div className="filters-popup" style={filtersActive ? { display: 'block', boxShadow: '0 0 1000px rgb(54, 58, 61)' } : { display: 'none' }}>
                     <FiltersPopup setFiltersActive={setFiltersActive} />
                 </div>

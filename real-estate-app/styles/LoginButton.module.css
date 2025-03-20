@@ -1,18 +1,21 @@
 .loginButton {
-    background: blue;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 20px;
-    padding: 8px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .loginButton:hover {
-    background: darkblue;
-  }
-  
+  position: absolute;  /* Ensures it's positioned independently */
+  top: 15px;  /* Adjusts vertical positioning */
+  right: 20px;  /* Moves it to the top right corner */
+
+  background: blue;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.loginButton:hover {
+  background: darkblue;
+}

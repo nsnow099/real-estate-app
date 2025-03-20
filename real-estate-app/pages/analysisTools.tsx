@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import HamburgerMenu from "@/components/HamburgerMenu";
 import pageStyles from "@/styles/AnalysisTools.module.css";
 import styles from "@/styles/Home.module.css";
 import ToolsPageControls from "@/components/toolsPageControls";
@@ -24,6 +25,7 @@ const AnalysisTools = () => {
 
     return (
         <div>
+            <HamburgerMenu />
             <div style={{ height: '60px' }}>
                 {/* header component */}
             </div>
