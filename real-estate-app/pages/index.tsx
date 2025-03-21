@@ -53,7 +53,7 @@ const HomePage = () => {
 
           {/* Our Realtors */}
           <div className={styles.circleWrapper}>
-            <Link href="/realtors">
+            <Link href="/realtor">
               <div className={styles.circle}>
                 <img src="/images/realtors.jpeg" alt="Our Realtors" />
               </div>

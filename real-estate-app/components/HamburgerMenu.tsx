@@ -18,7 +18,7 @@ const HamburgerMenu = () => {
           <li><Link href="/">Home</Link></li>  
           <li><Link href="/listingSearchPage?view=gallery">Gallery View</Link></li>
           <li><Link href="/listingSearchPage?view=map">Map View</Link></li>
-          <li><Link href="/realtors">Realtors</Link></li>
+          <li><Link href="/realtor?view=realtor">Realtors</Link></li>
           <li><Link href="/analysisTools?view=news">News</Link></li>
           <li><Link href="/analysisTools?view=advice">Advice</Link></li>
           <li><Link href="/analysisTools?view=trends">Market Trends</Link></li>

@@ -1,0 +1,297 @@
+/* realtor.module.css */
+.container {
+    height: 100vh;  /* Full height */
+    width: 100vw;   /* Full width */
+    background-image: url('/images/backgroundBlue.jpg');
+    background-size: cover;  /* Ensures the image covers the entire screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+  }
+  
+  .breadImage {
+    border-radius: 0.5rem; /* rounded-lg */
+  }
+  
+  .title {
+    color: white;
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    padding: 3.75rem; /* p-15 */
+    text-align: center;
+  }
+  
+  .searchBox1 {
+    position: absolute;
+    top: 11.25rem; /* top-45 */
+    left: 32.5rem; /* left-130 */
+    width: 23.75rem; /* w-95 */
+    height: 3rem; /* h-12 */
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem; /* rounded-lg */
+    border: 1px solid #ccc;
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+  
+  .searchBox2 {
+    position: absolute;
+    top: 11.25rem; /* top-45 */
+    left: 57.5rem; /* left-230 */
+    width: 23.75rem; /* w-95 */
+    height: 3rem; /* h-12 */
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem; /* rounded-lg */
+    border: 1px solid #ccc;
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+  
+  .searchIcon {
+    position: absolute;
+    top: 11.25rem; /* top-45 */
+    left: 82.5rem; /* left-330 */
+    border-radius: 0.5rem; /* rounded-lg */
+  }
+  
+  .filterButtonBuying {
+    position: absolute;
+    top: 15.5rem; /* top-62 */
+    left: 32.5rem; /* left-130 */
+    width: 6rem; /* w-24 */
+    height: 3rem; /* h-12 */
+    background-color: #fef9c3; /* bg-yellow-100 */
+    font-weight: 700; /* font-bold */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem; /* rounded-lg */
+  }
+  
+  .filterButtonSelling {
+    position: absolute;
+    top: 15.5rem; /* top-62 */
+    left: 39.5rem; /* left-158 */
+    width: 6rem; /* w-24 */
+    height: 3rem; /* h-12 */
+    background-color: #fef9c3; /* bg-yellow-100 */
+    font-weight: 700; /* font-bold */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem; /* rounded-lg */
+  }
+  
+  .filterButtonRating {
+    position: absolute;
+    top: 15.5rem; /* top-62 */
+    left: 46.5rem; /* left-186 */
+    width: 6rem; /* w-24 */
+    height: 3rem; /* h-12 */
+    background-color: #fef9c3; /* bg-yellow-100 */
+    font-weight: 700; /* font-bold */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem; /* rounded-lg */
+    border: 1px solid #ccc;
+    padding: 0 1rem;
+  }
+  
+  .filterButtonPriceRange {
+    width: 10rem; /* w-40 */
+    height: 3rem; /* h-12 */
+    background-color: #fef9c3; /* bg-yellow-100 */
+    font-weight: 700; /* font-bold */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem; /* rounded-lg */
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  
+  .filterButtonSpecialty {
+    position: absolute;
+    top: 15.5rem; /* top-62 */
+    left: 64.5rem; /* left-258 */
+    width: 10rem; /* w-40 */
+    height: 3rem; /* h-12 */
+    background-color: #fef9c3; /* bg-yellow-100 */
+    font-weight: 700; /* font-bold */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem; /* rounded-lg */
+    border: 1px solid #ccc;
+    padding: 0 1rem;
+  }
+  
+  .filterButtonLanguage {
+    position: absolute;
+    top: 15.5rem; /* top-62 */
+    left: 75.5rem; /* left-302 */
+    width: 10rem; /* w-40 */
+    height: 3rem; /* h-12 */
+    background-color: #fef9c3; /* bg-yellow-100 */
+    font-weight: 700; /* font-bold */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem; /* rounded-lg */
+    border: 1px solid #ccc;
+    padding: 0 1rem;
+  }
+  
+  .agentCount {
+    color: #6b7280; /* text-gray-500 */
+    font-size: 1rem; /* text-l */
+    font-weight: 700; /* font-bold */
+    position: absolute;
+    top: 31.25rem; /* top-125 */
+    left: 16.75rem; /* left-67 */
+  }
+  
+  .agentCard {
+    width: 20rem; /* w-80 */
+    height: 10rem; /* h-40 */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem; /* rounded-lg */
+    position: absolute;
+  }
+  
+  .agentCardLeft1 { left: 16.25rem; /* left-65 */ }
+  .agentCardLeft2 { left: 38.75rem; /* left-155 */ }
+  .agentCardLeft3 { left: 61.25rem; /* left-245 */ }
+  .agentCardLeft4 { left: 83.75rem; /* left-335 */ }
+  .topRow { top: 33.75rem; /* top-135 */ }
+  .bottomRow { top: 46.25rem; /* top-185 */ }
+  
+  .agentImageContainer {
+    position: absolute;
+    top: 2rem; /* top-8 */
+    left: 2rem; /* left-8 */
+    width: 6rem; /* w-24 */
+    height: 6rem; /* h-24 */
+    background-color: #fef9c3; /* bg-yellow-100 */
+    border-radius: 9999px; /* rounded-full */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .agentImage {
+    border-radius: 0.5rem; /* rounded-lg */
+  }
+  
+  .agentRating {
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 700; /* font-bold */
+    position: absolute;
+    top: 0.5rem; /* top-2 */
+    left: 0.75rem; /* left-3 */
+  }
+  
+  .agentName {
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 700; /* font-bold */
+    position: absolute;
+    top: 2rem; /* top-8 */
+    left: 10rem; /* left-40 */
+  }
+  
+  .agentBio {
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 700; /* font-bold */
+    position: absolute;
+    top: 4rem; /* top-16 */
+    left: 10rem; /* left-40 */
+  }
+  
+  .agentExperience {
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 700; /* font-bold */
+    position: absolute;
+    top: 7rem; /* top-28 */
+    left: 10rem; /* left-40 */
+  }
+  
+  .agentComments {
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 700; /* font-bold */
+    color: #6b7280; /* text-grey-500 */
+    position: absolute;
+    top: 8.75rem; /* top-35 */
+    left: 0.75rem; /* left-3 */
+  }
+  
+  .skipButtonRight {
+    border-radius: 0.5rem; /* rounded-lg */
+    position: absolute;
+    top: 43.25rem; /* top-173 */
+    left: 107.5rem; /* left-430 */
+  }
+  
+  .skipButtonLeft {
+    border-radius: 0.5rem; /* rounded-lg */
+    position: absolute;
+    top: 43.25rem; /* top-173 */
+    left: 9.5rem; /* left-38 */
+  }
+
+  .dropdownContainer {
+    position: absolute;
+    top: 15.5rem;
+    left: 53.5rem;
+  }
+
+  .dropdownContent {
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    width: 12rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+
+  .priceSlider {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .priceSlider:hover {
+    background: #fef9c3;
+  }
+  
+  .priceSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #f59e0b;
+    border-radius: 50%;
+    cursor: pointer;
+  }

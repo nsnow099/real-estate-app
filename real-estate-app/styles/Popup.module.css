@@ -1,0 +1,108 @@
+/* Overlay to blur background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup container (BIGGER SIZE) */
+.popup {
+  background: white;
+  width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Close button */
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* House image */
+.image {
+  width: 100%;
+  border-radius: 8px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Popup content */
+.content {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Address */
+.address {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Price */
+.price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #27ae60;
+  margin-bottom: 10px;
+}
+
+/* Features section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.1rem;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Section styling */
+.section {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Contact Agent button */
+.contactButton {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.contactButton:hover {
+  background-color: #0056b3;
+}
