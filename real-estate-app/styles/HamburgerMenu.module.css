@@ -62,3 +62,6 @@
     color: #007bff;
   }
   
+  .selected {
+    background-color: #47a4ec4b;
+  }
