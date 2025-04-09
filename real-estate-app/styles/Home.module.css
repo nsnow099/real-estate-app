@@ -17,10 +17,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  top: 15px;
+  position: fixed;
+  top: 0px;
   left: 0;
   padding: 10px 20px;
+  z-index: 100;
+  background-color: #47A4EC;
+  height: 60px;
 }
 
 /* Hamburger Menu */

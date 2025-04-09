@@ -3,32 +3,35 @@ import React from 'react';
 import { useState } from "react";
 import styles from '@/styles/realtor.module.css'; // Updated import to match new file name
 import HamburgerMenu from "@/components/HamburgerMenu";
+import LoginButton from "@/components/LoginButton";
+import homeStyles from "@/styles/Home.module.css";
 
 const realtor: React.FC = () => {
 const [price, setPrice] = useState(5000); // Default price
 const [isOpen, setIsOpen] = useState(false); // Dropdown state  
   return (
     <div className={`${styles.container} h-screen bg-cover bg-center`}>
-      <header className={styles.header}>
-          <HamburgerMenu /> {/* ✅ Replaces the default icon */}
-        </header>
+      <header className={homeStyles.header}>
+        <HamburgerMenu /> {/* ✅ Replaces the default icon */}
+        <LoginButton />
+      </header>
       <h1 className={styles.title}>Discover Agents</h1>
 
       <div>
-      {/* Address Search Box */}
-      <input
-        type="text"
-        placeholder="Address, City, Province, ZIP Code..."
-        className={styles.searchBox1}
-      />
+        {/* Address Search Box */}
+        <input
+          type="text"
+          placeholder="Address, City, Province, ZIP Code..."
+          className={styles.searchBox1}
+        />
 
-      {/* Agent Name Search Box */}
-      <input
-        type="text"
-        placeholder="Agent Name..."
-        className={styles.searchBox2}
-      />
-    </div>
+        {/* Agent Name Search Box */}
+        <input
+          type="text"
+          placeholder="Agent Name..."
+          className={styles.searchBox2}
+        />
+      </div>
       <img
         src="/images/searchicon.jpg"
         alt="A beautiful icon"
@@ -38,8 +41,12 @@ const [isOpen, setIsOpen] = useState(false); // Dropdown state
         style={{ cursor: "pointer" }} // Makes it look clickable
       />
 
-      <div className={styles.filterButtonBuying} style={{ cursor: "pointer" }}>Buying</div>
-      <div className={styles.filterButtonSelling} style={{ cursor: "pointer" }}>Selling</div>
+      <div className={styles.filterButtonBuying} style={{ cursor: "pointer" }}>
+        Buying
+      </div>
+      <div className={styles.filterButtonSelling} style={{ cursor: "pointer" }}>
+        Selling
+      </div>
       <select className={styles.filterButtonRating}>
         <option value="">Ratings</option>
         <option value="5stars">♦♦♦♦♦</option>
@@ -49,26 +56,26 @@ const [isOpen, setIsOpen] = useState(false); // Dropdown state
         <option value="1stars">♦</option>
       </select>
       <div className={styles.dropdownContainer}>
-      {/* Button to open dropdown */}
-      <button className={styles.filterButtonPriceRange} onClick={() => setIsOpen(!isOpen)}>
-        Price Range ▼
-      </button>
-      {/* Dropdown content (only shown when isOpen is true) */}
-      {isOpen && (
-        <div className={styles.dropdownContent}>
-          <label className={styles.sliderLabel}>Price: ${price}</label>
-          <input
-            type="range"
-            min="0"
-            max="10000"
-            step="100"
-            value={price}
-            onChange={(e) => setPrice(Number(e.target.value))}
-            className={styles.priceSlider}
-          />
-        </div>
-      )}
-    </div>
+        {/* Button to open dropdown */}
+        <button className={styles.filterButtonPriceRange} onClick={() => setIsOpen(!isOpen)}>
+          Max Price ▼
+        </button>
+        {/* Dropdown content (only shown when isOpen is true) */}
+        {isOpen && (
+          <div className={styles.dropdownContent}>
+            <label className={styles.sliderLabel}>Price: ${price}</label>
+            <input
+              type="range"
+              min="0"
+              max="10000"
+              step="100"
+              value={price}
+              onChange={(e) => setPrice(Number(e.target.value))}
+              className={styles.priceSlider}
+            />
+          </div>
+        )}
+      </div>
       <select className={styles.filterButtonSpecialty}>
         <option value="">Select Specialty</option>
         <option value="residential">Residential</option>

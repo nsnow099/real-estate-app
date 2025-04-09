@@ -31,7 +31,10 @@ const HousePopup: React.FC<HousePopupProps> = ({ house, onClose }) => {
   return (
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.popup} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.closeButton} onClick={onClose}>✖</button>
+        <div className={styles.closeButtonArea} onClick={onClose}>
+          <button className={styles.closeButton} onClick={onClose}>✖</button>
+        </div>
+        
         
         <img src={house.image} alt={house.address} className={styles.image} />
 
