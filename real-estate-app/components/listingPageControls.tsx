@@ -8,7 +8,7 @@ const ListingPageControls = ({display, setDisplay, setFiltersActive}:any) => {
 
     return (
         <div className='controls'>
-            <div className='search-filter-group'>
+            <div className='search-filter-group' onClick={(e) => e.stopPropagation()}>
                 <button className='filter-button' onClick={() => setFiltersActive(true)}>
                     <FontAwesomeIcon className='filter-icon' icon={faFilter} />
                 </button>

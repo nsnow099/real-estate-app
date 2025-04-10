@@ -26,7 +26,7 @@ const ListingSearchPage = () => {
     }, [view]);
 
     return ( 
-        <div className={styles.pageContainer}> {/* Add this wrapper to maintain spacing */}
+        <div className={styles.pageContainer} onClick={() => setFiltersActive(false)} > {/* Add this wrapper to maintain spacing */}
             {/* ✅ Hamburger Menu (Positioned Absolutely to Avoid Pushing Content) */}
             <header className={styles.header}>
                 <HamburgerMenu /> {/* ✅ Replaces the default icon */}
@@ -50,7 +50,7 @@ const ListingSearchPage = () => {
                 </div>
 
                 {/* Filters Popup */}
-                <div className="filters-popup" style={filtersActive ? { display: 'block', boxShadow: '0 0 1000px rgb(54, 58, 61)' } : { display: 'none' }}>
+                <div className="filters-popup"  onClick={(e) => e.stopPropagation()}  style={filtersActive ? { display: 'block', boxShadow: '0 0 1000px rgb(54, 58, 61)' } : { display: 'none' }}>
                     <FiltersPopup setFiltersActive={setFiltersActive} />
                 </div>
             </main>

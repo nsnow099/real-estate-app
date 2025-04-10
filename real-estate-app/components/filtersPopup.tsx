@@ -3,7 +3,7 @@ import "@/styles/listingSearchPage.css";
 const FiltersPopup = ({setFiltersActive}:any) => {
 
     return (
-        <div>
+        <div style={{height:'fitContent', width:'fitContent'}}>
             <div className='saved-searches'>
                 <label htmlFor='saved searches'>Your Saved Filters: </label>
                 <select className='saved-searches-dropdown' name='saved searches'>
@@ -44,6 +44,7 @@ const FiltersPopup = ({setFiltersActive}:any) => {
                         </div>
                     </div>
                 </div>
+
                 <div className="grouping-row">
                     <div className="filter-area">
                         Year Built
