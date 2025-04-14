@@ -43,25 +43,13 @@ const HamburgerMenu = () => {
             <Link href="/?view=home">Home</Link>
           </li>  
           <li className={currPage === "gallery" ? styles.selected : ""}>
-            <Link href="/listingSearchPage?view=gallery">Gallery View</Link>
-          </li>
-          <li className={currPage === "map" ? styles.selected : ""}>
-            <Link href="/listingSearchPage?view=map">Map View</Link>
+            <Link href="/listingSearchPage?view=gallery">Listings</Link>
           </li>
           <li className={currPage === "realtor" ? styles.selected : ""}>
             <Link href="/realtor?view=realtor">Realtors</Link>
           </li>
           <li className={currPage === "news" ? styles.selected : ""}>
-            <Link href="/analysisTools?view=news">News</Link>
-          </li>
-          <li className={currPage === "advice" ? styles.selected : ""}>
-            <Link href="/analysisTools?view=advice">Advice</Link>
-          </li>
-          <li className={currPage === "trends" ? styles.selected : ""}>
-            <Link href="/analysisTools?view=trends">Market Trends</Link>
-          </li>
-          <li className={currPage === "calculator" ? styles.selected : ""}>
-            <Link href="/analysisTools?view=calculator">Mortgage Calculator</Link>
+            <Link href="/analysisTools?view=news">Analysis Tools</Link>
           </li>
         </ul>
       </div>

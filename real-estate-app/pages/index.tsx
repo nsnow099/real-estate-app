@@ -25,8 +25,8 @@ const HomePage = () => {
 
         {/* Search Bar */}
         <div className={styles.searchContainer}>
-          <input type="text" placeholder="Search by location, address or postal code" className={styles.searchInput} />
-          <button className={styles.searchButton}>Find your home</button>
+          <input type="text" placeholder="What are you looking for?" className={styles.searchInput} />
+          <button className={styles.searchButton}>Search</button>
         </div>
 
         {/* Circle Options */}
@@ -35,20 +35,20 @@ const HomePage = () => {
           <div className={styles.circleWrapper}>
             <Link href={{ pathname: "/listingSearchPage", query: { view: "gallery" } }}>
               <div className={styles.circle}>
-                <img src="/images/gallery.jpg" alt="Gallery View" />
+                <img src="/images/gallery.jpg" alt="Listings" />
               </div>
             </Link>
-            <p className={styles.circleLabel}>Gallery View</p>
+            <p className={styles.circleLabel}>Listings</p>
           </div>
 
           {/* Map View */}
           <div className={styles.circleWrapper}>
-            <Link href={{ pathname: "/listingSearchPage", query: { view: "map" } }}>
+            <Link href={{ pathname: "/analysisTools", query: { view: "news" } }}>
               <div className={styles.circle}>
-                <img src="/images/map.jpg" alt="Map View" />
+                <img src="/images/map.jpg" alt="Analysis Tools" />
               </div>
             </Link>
-            <p className={styles.circleLabel}>Map View</p>
+            <p className={styles.circleLabel}>Analysis Tools</p>
           </div>
 
           {/* Our Realtors */}
@@ -58,7 +58,7 @@ const HomePage = () => {
                 <img src="/images/realtors.jpeg" alt="Our Realtors" />
               </div>
             </Link>
-            <p className={styles.circleLabel}>Our Realtors</p>
+            <p className={styles.circleLabel}>Realtors</p>
           </div>
         </div>
       </div>
