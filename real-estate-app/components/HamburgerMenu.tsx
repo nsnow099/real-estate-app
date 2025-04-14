@@ -14,8 +14,6 @@ const HamburgerMenu = () => {
       setPage("gallery");
     } else if (view === "map") {
       setPage("map");
-    } else if (view === "home") {
-      setPage("home");
     } else if (view === "realtor") {
       setPage("realtor");
     }  else if (view === "news") {
@@ -26,6 +24,8 @@ const HamburgerMenu = () => {
       setPage("trends");
     } else if (view === "calculator") {
       setPage("calculator");
+    } else {
+      setPage("home");
     }
   }, [view]);
 
