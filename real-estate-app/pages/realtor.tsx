@@ -1,142 +1,182 @@
 // realtor.tsx
-import React from 'react';
-import { useState } from "react";
-import styles from '@/styles/realtor.module.css'; // Updated import to match new file name
+import React, { useState } from "react";
+import styles from '@/styles/realtor.module.css';
 import HamburgerMenu from "@/components/HamburgerMenu";
 import LoginButton from "@/components/LoginButton";
 import homeStyles from "@/styles/Home.module.css";
+import Pagination from "@/components/Pagination";
 
-const realtor: React.FC = () => {
-const [price, setPrice] = useState(5000); // Default price
-const [isOpen, setIsOpen] = useState(false); // Dropdown state  
+const Realtor: React.FC = () => {
+  const [rating, setRating] = useState("");
+  const [specialty, setSpecialty] = useState("");
+  const [language, setLanguage] = useState("");
+
+  const agents = [
+    {
+      name: "Scottier Barney",
+      rating: "♦♦♦♦",
+      bio: "Specialist in downtown condos",
+      experience: "5 years experience",
+      image: "/images/guy1.jpg",
+    },
+    {
+      name: "Amara Chen",
+      rating: "♦♦♦♦♦",
+      bio: "Luxury home expert",
+      experience: "7 years experience",
+      image: "/images/guy2.jpg",
+    },
+    {
+      name: "Liam O'Reilly",
+      rating: "♦♦♦",
+      bio: "Focus on suburban family homes",
+      experience: "3 years experience",
+      image: "/images/guy3.jpg",
+    },
+    {
+      name: "Nina Patel",
+      rating: "♦♦♦♦",
+      bio: "Commercial property pro",
+      experience: "6 years experience",
+      image: "/images/guy4.jpg",
+    },
+    {
+      name: "Carlos Rivera",
+      rating: "♦♦♦♦♦",
+      bio: "Multi-lingual agent (EN/ES)",
+      experience: "8 years experience",
+      image: "/images/guy5.jpg",
+    },
+    {
+      name: "Fatima Zahra",
+      rating: "♦♦♦♦",
+      bio: "First-time buyer guide",
+      experience: "4 years experience",
+      image: "/images/guy6.jpg",
+    },
+    {
+      name: "Jackson Lee",
+      rating: "♦♦",
+      bio: "Budget-friendly listings",
+      experience: "2 years experience",
+      image: "/images/guy7.jpg",
+    },
+    {
+      name: "Isabelle Tremblay",
+      rating: "♦♦♦♦♦",
+      bio: "Bilingual French-English agent",
+      experience: "9 years experience",
+      image: "/images/guy8.jpeg",
+    },
+  ];
+
   return (
     <div className={`${styles.container} h-screen bg-cover bg-center`}>
       <header className={homeStyles.header}>
-        <HamburgerMenu /> {/* ✅ Replaces the default icon */}
+        <HamburgerMenu />
         <LoginButton />
       </header>
+
       <h1 className={styles.title}>Discover Agents</h1>
 
-      <div>
-        {/* Address Search Box */}
+      <div className={styles.searchContainer}>
         <input
           type="text"
-          placeholder="Address, City, Province, ZIP Code..."
+          placeholder="City or Province..."
           className={styles.searchBox1}
         />
-
-        {/* Agent Name Search Box */}
         <input
           type="text"
           placeholder="Agent Name..."
           className={styles.searchBox2}
         />
+        <img
+          src="/images/searchicon.jpg"
+          alt="Search Icon"
+          width={48}
+          height={48}
+          className={styles.searchIcon}
+        />
       </div>
-      <img
-        src="/images/searchicon.jpg"
-        alt="A beautiful icon"
-        width={48}
-        height={48}
-        className={styles.searchIcon}
-        style={{ cursor: "pointer" }} // Makes it look clickable
-      />
 
-      <div className={styles.filterButtonBuying} style={{ cursor: "pointer" }}>
-        Buying
-      </div>
-      <div className={styles.filterButtonSelling} style={{ cursor: "pointer" }}>
-        Selling
-      </div>
-      <select className={styles.filterButtonRating}>
-        <option value="">Ratings</option>
-        <option value="5stars">♦♦♦♦♦</option>
-        <option value="4stars">♦♦♦♦</option>
-        <option value="3stars">♦♦♦</option>
-        <option value="2stars">♦♦</option>
-        <option value="1stars">♦</option>
-      </select>
-      <div className={styles.dropdownContainer}>
-        {/* Button to open dropdown */}
-        <button className={styles.filterButtonPriceRange} onClick={() => setIsOpen(!isOpen)}>
-          Max Price ▼
+      <div className={styles.filtersContainer}>
+        <div className={styles.dropdownWrapper}>
+          <select
+            className={styles.filterButtonRating}
+            value={rating}
+            onChange={(e) => setRating(e.target.value)}
+          >
+            <option value="">Ratings</option>
+            <option value="5stars">♦♦♦♦♦</option>
+            <option value="4stars">♦♦♦♦</option>
+            <option value="3stars">♦♦♦</option>
+            <option value="2stars">♦♦</option>
+            <option value="1stars">♦</option>
+          </select>
+        </div>
+
+        <div className={styles.dropdownWrapper}>
+          <select
+            className={styles.filterButtonSpecialty}
+            value={specialty}
+            onChange={(e) => setSpecialty(e.target.value)}
+          >
+            <option value="">Select Specialty</option>
+            <option value="residential">Residential</option>
+            <option value="commercial">Commercial</option>
+            <option value="luxury">Luxury</option>
+          </select>
+        </div>
+
+        <div className={styles.dropdownWrapper}>
+          <select
+            className={styles.filterButtonLanguage}
+            value={language}
+            onChange={(e) => setLanguage(e.target.value)}
+          >
+            <option value="">Select Language</option>
+            <option value="english">English</option>
+            <option value="french">French</option>
+          </select>
+        </div>
+
+        <button
+          className={styles.clearFiltersButton}
+          onClick={() => {
+            setRating("");
+            setSpecialty("");
+            setLanguage("");
+          }}
+        >
+          Clear All Filters
         </button>
-        {/* Dropdown content (only shown when isOpen is true) */}
-        {isOpen && (
-          <div className={styles.dropdownContent}>
-            <label className={styles.sliderLabel}>Price: ${price}</label>
-            <input
-              type="range"
-              min="0"
-              max="10000"
-              step="100"
-              value={price}
-              onChange={(e) => setPrice(Number(e.target.value))}
-              className={styles.priceSlider}
-            />
-          </div>
-        )}
       </div>
-      <select className={styles.filterButtonSpecialty}>
-        <option value="">Select Specialty</option>
-        <option value="residential">Residential</option>
-        <option value="commercial">Commercial</option>
-        <option value="luxury">Luxury</option>
-      </select>
-      <select className={styles.filterButtonLanguage}>
-        <option value="">Select Language</option>
-        <option value="english">English</option>
-        <option value="french">French</option>
-      </select>
 
       <h1 className={styles.agentCount}>100 agents found</h1>
 
-      {/* Agent Cards (Example for one, repeat for others) */}
-      {Array.from({ length: 8 }).map((_, index) => (
-        <div
-          key={index}
-          className={`${styles.agentCard} ${
-            index % 4 === 0 ? styles.agentCardLeft1 :
-            index % 4 === 1 ? styles.agentCardLeft2 :
-            index % 4 === 2 ? styles.agentCardLeft3 :
-            styles.agentCardLeft4
-          } ${index < 4 ? styles.topRow : styles.bottomRow}`} 
-          style={{ cursor: "pointer" }} // Makes it look clickable
-        >
-          <div className={styles.agentImageContainer}>
-            <img
-              src="/images/contact.png"
-              alt="A beautiful png"
-              width={100}
-              height={100}
-              className={styles.agentImage}
-            />
+      <div className={styles.agentGrid}>
+        {agents.map((agent, index) => (
+          <div key={index} className={styles.agentCard} style={{ cursor: "pointer" }}>
+            <div className={styles.agentImageContainer}>
+              <img
+                src={agent.image}
+                alt={`Profile of ${agent.name}`}
+                width={100}
+                height={100}
+                className={styles.agentImage}
+              />
+            </div>
+            <h1 className={styles.agentRating}>Rating: {agent.rating}</h1>
+            <h1 className={styles.agentName}>{agent.name}</h1>
+            <h1 className={styles.agentBio}>{agent.bio}</h1>
+            <h1 className={styles.agentExperience}>{agent.experience}</h1>
           </div>
-          <h1 className={styles.agentRating}>Rating: ♦♦♦♦</h1>
-          <h1 className={styles.agentName}>Name: Scottier Barney</h1>
-          <h1 className={styles.agentBio}>Bio: ...</h1>
-          <h1 className={styles.agentExperience}>Experience: ...</h1>
-          <h1 className={styles.agentComments}>comments</h1>
-        </div>
-      ))}
+        ))}
+      </div>
 
-      <img
-        src="/images/skipbutton.png"
-        alt="A beautiful forward"
-        width={50}
-        height={50}
-        className={styles.skipButtonRight}
-        style={{ cursor: "pointer" }} // Makes it look clickable
-      />
-      <img
-        src="/images/skipbutton2.png"
-        alt="A beautiful forward"
-        width={50}
-        height={50}
-        className={styles.skipButtonLeft}
-        style={{ cursor: "pointer" }} // Makes it look clickable
-      />
+      <Pagination />
     </div>
   );
 };
 
-export default realtor;
+export default Realtor;

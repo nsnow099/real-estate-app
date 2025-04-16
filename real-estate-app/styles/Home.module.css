@@ -1,28 +1,42 @@
-/* General Page Styles */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #666, #222);
+  background: linear-gradient(to bottom, #666, #444, #222, #555);
+  background-size: 100% 400%;
+  animation: gradientShiftY 15s ease infinite;
   color: white;
   font-family: Arial, sans-serif;
   position: relative;
 }
 
-/* Header (Only contains Hamburger & Login) */
+@keyframes gradientShiftY {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
+
+
 .header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0px;
+  top: 0;
   left: 0;
   padding: 10px 20px;
   z-index: 100;
-  background-color: #47A4EC;
+  background-color: #666;
   height: 60px;
 }
 
@@ -46,6 +60,7 @@
 
 /* Search Bar (Much Wider) */
 .searchContainer {
+  position: relative;
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.2);
@@ -60,10 +75,14 @@
   flex: 1;
   padding: 10px;
   font-size: 18px;
+  border: none;
+  border-radius: 20px;  /* Rounded corners */
+  outline: none;
 }
 
 /* Search Button (Fixing Color) */
 .searchButton {
+  margin-left: 10px;  /* Spacing between input and button */
   padding: 10px 15px;
   font-size: 16px;
   background: blue;
@@ -71,7 +90,7 @@
   border: none;
   cursor: pointer;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 20px;  /* Rounded corners */
   transition: background 0.3s;
 }
 
@@ -157,5 +176,36 @@
                0px 0px 20px rgba(0, 255, 0, 0.8),
                0px 0px 30px rgba(0, 255, 0, 0.6),
                0px 0px 40px rgba(0, 255, 0, 0.4);
-}*/
+} */
 
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  border-radius: 8px;
+  margin-top: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 99;
+}
+
+.dropdown h4 {
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #222;
+  border-bottom: 1px solid #ccc;
+}
+
+.dropdown p {
+  margin: 6px 0;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropdown p:hover {
+  background: rgba(0, 0, 0, 0.1);
+}

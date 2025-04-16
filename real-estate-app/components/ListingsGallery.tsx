@@ -7,7 +7,7 @@ import HousePopup from "./popups"; // ✅ Correct import
 const listings = [
   {
     image: "/images/house1.jpg",
-    address: "123 Sesame Street, St Catharines, ON",
+    address: "123 Sesame Street, Grimsby, ON",
     price: "$500,000",
     beds: 4,
     baths: 3,
