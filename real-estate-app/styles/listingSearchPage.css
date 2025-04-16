@@ -54,6 +54,10 @@
     border-bottom-left-radius: 45px;
 }
 
+.filter-button:hover {
+    background-color: #3e8cc8;
+}
+
 .filter-icon {
     position: relative;
     font-size: 15px;
@@ -138,6 +142,11 @@
 .inactive {
     background-color: white; 
     box-shadow: none;
+}
+
+.inactive:hover {
+    position: relative;
+    z-index: 10;
 }
 
 .inactive-right {

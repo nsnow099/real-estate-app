@@ -39,7 +39,7 @@ const ListingSearchPage = () => {
                 </div>
 
                 {/* Gallery View */}
-                <div style={{ display: display === 'gallery' ? 'block' : 'none' }}>
+                <div style={{ display: display === 'gallery' ? 'block' : 'none', paddingLeft: '7px' }}>
                     <ListingsGallery />
                     <Pagination /> 
                 </div>
