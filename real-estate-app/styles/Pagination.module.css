@@ -21,6 +21,14 @@
     font-size: 18px;
     padding: 6px 10px;
   }
+
+  .arrow:disabled {
+    background: #eee
+  }
+
+  .arrow:disabled:hover {
+    box-shadow: none;
+  }
   
   .pageNumber:hover, .arrow:hover {
     background: #eee;
@@ -32,3 +40,6 @@
     font-weight: bold;
   }
   
+  .active:hover {
+    background: #007bff;
+  }

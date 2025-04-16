@@ -4,9 +4,7 @@ import styles from "@/styles/LoginButton.module.css";
 
 const LoginButton = () => {
   return (
-    <Link href="/login">
-      <div className={styles.loginButton}>Log in</div>
-    </Link>
+    <div className={styles.loginButton}>Log in</div>
   );
 };
 
