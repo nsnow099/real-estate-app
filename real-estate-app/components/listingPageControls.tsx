@@ -13,7 +13,7 @@ const ListingPageControls = ({display, setDisplay, setFiltersActive}:any) => {
                     <FontAwesomeIcon className='filter-icon' icon={faFilter} />
                 </button>
                 <div className='search-field'>
-                    <input className='search-input' type="text" placeholder="  Search by location, address or postal code" name="search"></input>
+                    <input className='search-input' type="text" placeholder="Search by location, address or postal code" name="search"></input>
                     <FontAwesomeIcon className='search-icon' icon={faMagnifyingGlass} />
                 </div>
             </div>
