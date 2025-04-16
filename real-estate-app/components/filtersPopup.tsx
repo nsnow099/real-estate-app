@@ -38,9 +38,9 @@ const FiltersPopup = ({setFiltersActive}:any) => {
                         Price Range
                         <br/>
                         <div className="options">
-                            $<input type="text" placeholder="Min" style={{width:"60px"}}></input>
+                            $<input type="number" min="0" placeholder="Min" style={{width:"60px"}}></input>
                             &nbsp;&nbsp;-&nbsp;&nbsp;
-                            $<input type="text" placeholder="Max" style={{width:"60px"}}></input>
+                            $<input type="number" min="0" placeholder="Max" style={{width:"60px"}}></input>
                         </div>
                     </div>
                 </div>
@@ -50,9 +50,9 @@ const FiltersPopup = ({setFiltersActive}:any) => {
                         Year Built
                         <br/>
                         <div className="options">
-                            <input type="text" placeholder="Min" style={{width:"60px"}}></input>
+                            <input type="number" min="1600" placeholder="Min" style={{width:"60px"}}></input>
                             -
-                            <input type="text" placeholder="Max" style={{width:"60px"}}></input>
+                            <input type="number" min="1600" placeholder="Max" style={{width:"60px"}}></input>
                         </div>
                     </div>
                     <div className="filter-area">
@@ -90,9 +90,9 @@ const FiltersPopup = ({setFiltersActive}:any) => {
                         Land Size &#40;m²&#41;
                         <br/>
                         <div className="options">
-                            <input type="text" placeholder="Min" style={{width:"60px"}}></input>
+                            <input type="number" min="0" placeholder="Min" style={{width:"60px"}}></input>
                             -
-                            <input type="text" placeholder="Max" style={{width:"60px"}}></input>
+                            <input type="number" min="0" placeholder="Max" style={{width:"60px"}}></input>
                         </div>
                     </div>
                 </div>
@@ -101,9 +101,9 @@ const FiltersPopup = ({setFiltersActive}:any) => {
                         Storeys
                         <br/>
                         <div className="options">
-                            <input type="text" placeholder="Min" style={{width:"60px"}}></input>
+                            <input type="number" min="0" placeholder="Min" style={{width:"60px"}}></input>
                             -
-                            <input type="text" placeholder="Max" style={{width:"60px"}}></input>
+                            <input type="number" min="0" placeholder="Max" style={{width:"60px"}}></input>
                         </div>
                     </div>
                 </div>
@@ -111,17 +111,21 @@ const FiltersPopup = ({setFiltersActive}:any) => {
             <div className="filter-grouping">
                 <div className="grouping-row">
                     <div className="filter-area" style={{width:'50%'}}>
-                        Minimum Beds
+                        Beds
                         <br/>
                         <div className="options">
-                            <input type="text" placeholder="Any" style={{width:"60px"}}></input>
+                            <input type="number" min="0" placeholder="Min" style={{width:"60px"}}></input>
+                            -
+                            <input type="number" min="0" placeholder="Max" style={{width:"60px"}}></input>
                         </div>
                     </div>
                     <div className="filter-area" style={{width:'50%'}}>
-                        Minimum Baths
+                        Baths
                         <br/>
                         <div className="options">
-                            <input type="text" placeholder="Any" style={{width:"60px"}}></input>
+                            <input type="number" min="0" placeholder="Min" style={{width:"60px"}}></input>
+                            -
+                            <input type="number" min="0" placeholder="Max" style={{width:"60px"}}></input>
                         </div>
                     </div>
                 </div>
@@ -133,17 +137,19 @@ const FiltersPopup = ({setFiltersActive}:any) => {
                         Save to your filters    
                     </button>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <button className="form-ctrl-btn" onClick={() => setFiltersActive(false)}>
+                    <form onSubmit={() => setFiltersActive(false)}>
+                        <button type="button" className="form-cancel-btn" onClick={() => setFiltersActive(false)}>
                         Cancel
-                    </button>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <button className="form-ctrl-btn" onClick={() => setFiltersActive(false)} style={{backgroundColor:"#47A4EC"}}>
-                        Search
-                    </button>
-                    {/* add brief loading animation? */}
+                        </button>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="submit" className="form-search-btn">
+                            Search
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
+        
     )
 }
 

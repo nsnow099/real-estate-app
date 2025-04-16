@@ -50,9 +50,12 @@ const ListingSearchPage = () => {
                 </div>
 
                 {/* Filters Popup */}
-                <div className="filters-popup"  onClick={(e) => e.stopPropagation()}  style={filtersActive ? { display: 'block', boxShadow: '0 0 1000px rgb(54, 58, 61)' } : { display: 'none' }}>
-                    <FiltersPopup setFiltersActive={setFiltersActive} />
+                <div className="overlay" style={filtersActive ? { display: 'block'} : { display: 'none' }}>
+                    <div className="filters-popup"  onClick={(e) => e.stopPropagation()}  >
+                        <FiltersPopup setFiltersActive={setFiltersActive} />
+                    </div>
                 </div>
+                
             </main>
 
             <footer className={styles.footer}></footer>

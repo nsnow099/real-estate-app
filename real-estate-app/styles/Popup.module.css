@@ -28,18 +28,23 @@
 
 /* Close button */
 .closeButton {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #333;
   cursor: pointer;
   background: none;
   border: none;
 }
 
+.closeButton:hover {
+  color: crimson;
+  box-shadow: none;
+}
+
 .closeButtonArea {
   cursor: pointer;
   position: absolute;
-  top: 1px;
-  right: 3px;
+  top: 0px;
+  right: 4px;
   width: fit-content;
   height: fit-content;
   background: none;

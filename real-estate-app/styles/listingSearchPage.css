@@ -144,9 +144,19 @@
     margin-left: -15px;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+}  
+
 /* ✅ FIX: Move Filters Popup Above Listings */
 .filters-popup {
-    display: none; /* Initially hidden */
+    display: block; /* Initially hidden */
     position: fixed; /* Fix it to viewport */
     top: 20%; /* Move it above listings */
     left: 50%;
@@ -190,7 +200,7 @@ label {
 }
 
 .grouping-row {
-    margin-top: 10px;
+    margin-top: 15px;
     display: inline-flex;
     justify-content: space-between;
     height: fit-content;
@@ -209,11 +219,32 @@ label {
     width: 80%;
 }
 
-.form-ctrl-btn {
+.form-search-btn {
     height: 30px;
     width: 80px;
     border: 1px solid;
     border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    background-color: #47A4EC;
+}
+
+.form-search-btn:hover {
+    background-color: #3e8cc8;
+}
+
+.form-cancel-btn {
+    height: 30px;
+    width: 80px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    background-color: #c1c6ca;
+}
+
+.form-cancel-btn:hover {
+    background-color: #a4a9ad;
 }
 
 .save-filters-btn {
