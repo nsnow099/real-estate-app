@@ -56,6 +56,7 @@
     font-weight: 600;
     font-size: 90%;
     background-color: white;
+    color: #666666;
 }
 
 .middleButtonInactive {
@@ -67,6 +68,7 @@
     font-weight: 600;
     font-size: 90%;
     background-color: white;
+    color: #666666;
 }
 
 .rightButtonInactive {
@@ -78,19 +80,26 @@
     font-weight: 600;
     font-size: 90%;
     background-color: white;
+    color: #666666;
 }
 
 .rightButtonInactive:hover {
     position: relative;
     z-index: 10;
+    background-color: #47a4ec4b;
+    box-shadow: none;
 }
 
 .middleButtonInactive:hover {
     position: relative;
     z-index: 10;
+    background-color: #47a4ec4b;
+    box-shadow: none;
 }
 
 .leftButtonInactive:hover {
     position: relative;
     z-index: 10;
+    background-color: #47a4ec4b;
+    box-shadow: none;
 }
