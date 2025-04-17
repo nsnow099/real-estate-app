@@ -5,12 +5,19 @@ const MortgageCalculator = () => {
         <div className={styles.formArea}>
             <div className={styles.form}>
                 <div>
-                    <label htmlFor="price" className={styles.label}>Price</label>
+                    <label htmlFor="price" className={styles.label}>
+                        Price
+                        <div style={{color:'red'}}>*</div>
+                    </label>
+                    
                     $<input type="number" name="price" className={styles.input}></input>
                 </div>
                 <br/>
                 <div>
-                    <label htmlFor="down payment" className={styles.label}>Down payment</label>
+                    <label htmlFor="down payment" className={styles.label}>
+                        Down payment
+                        <div style={{color:'red'}}>*</div>
+                    </label>
                     $<input type="number" name="down payment" className={styles.input}></input>
                 </div>
                 <br/>
@@ -29,17 +36,26 @@ const MortgageCalculator = () => {
                 </div>
                 <br/>
                 <div>
-                    <label htmlFor="amortization" className={styles.label}>Amortization years</label>
+                    <label htmlFor="amortization" className={styles.label}>
+                        Amortization years
+                        <div style={{color:'red'}}>*</div>
+                    </label>
                     <input type="number" name="amortization" className={styles.input}></input>
                 </div>
                 <br/>
                 <div>
-                    <label htmlFor="rate" className={styles.label}>Mortgage rate</label>
+                    <label htmlFor="rate" className={styles.label}>
+                        Mortgage rate
+                        <div style={{color:'red'}}>*</div>
+                    </label>
                     <input type="number" name="rate" className={styles.input}></input>%
                 </div>
                 <br/>
                 <div>
-                    <label htmlFor="frequency" className={styles.label}>Payment frequency</label>
+                    <label htmlFor="frequency" className={styles.label}>
+                        Payment frequency
+                        <div style={{color:'red'}}>*</div>
+                    </label>
                     <select name='frequency' style={{width:'150px'}} className={styles.input}>
                         <option>Monthly</option>
                         <option>Weekly</option>

@@ -22,7 +22,7 @@
 .label {
     float: left;
     width: 200px;
-    
+    display: inline-flex;
 }
 
 .input {
