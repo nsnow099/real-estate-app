@@ -36,15 +36,15 @@ const AnalysisTools = () => {
             <main className={styles.main}>
                 <ToolsPageControls display={display} setDisplay={setDisplay}></ToolsPageControls>
                 <br/>
-                <div style={{backgroundColor:'white', width:'100%', height:'420px'}}>
+                <div style={{backgroundColor:'white', width:'100%', height:'550px'}}>
                     <div style={display === 'news' ? {display:'block'} : {display:'none'}}>
-                        Relevant news would display here
+                        
                     </div>
                     <div style={display === 'advice' ? {display:'block'} : {display:'none'}}>
-                        Buying and selling tips would display here
+                        
                     </div>
                     <div style={display === 'trends' ? {display:'block'} : {display:'none'}}>
-                        Current market trends analysis would display here
+                        
                     </div>
                     <div style={display === 'calculator' ? {display:'block'} : {display:'none'}}>
                         <MortgageCalculator></MortgageCalculator>

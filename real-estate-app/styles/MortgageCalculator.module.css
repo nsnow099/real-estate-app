@@ -1,14 +1,30 @@
-.form {
+.formArea {
     display: flex;
     width: 100%;
     height: 100%;
     justify-content: center;
     flex-direction: column;
-    padding-left: 35%;
-    padding-top: 40px;
+    align-self: center;
+    /* padding-left: 35%; */
+    padding-top: 20px;
+
+}
+
+.form {
+    height: fit-content;
+    width: fit-content;
+    border: 2px solid;
+    padding: 10px;
+    margin: auto;
+    font-size: x-large;
 }
 
 .label {
     float: left;
-    width: 150px;
+    width: 200px;
+    
+}
+
+.input {
+    font-size: large;
 }

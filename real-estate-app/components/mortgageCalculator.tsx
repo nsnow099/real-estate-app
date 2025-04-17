@@ -2,19 +2,19 @@ import styles from '@/styles/MortgageCalculator.module.css'
 
 const MortgageCalculator = () => {
     return (
-        <div className={styles.form}>
-            <div style={{height:'fit-content', width:'fit-content', border:'2px solid', padding:'10px'}}>
+        <div className={styles.formArea}>
+            <div className={styles.form}>
                 <div>
                     <label htmlFor="price" className={styles.label}>Price</label>
-                    $<input type="text" name="price"></input>
+                    $<input type="number" name="price" className={styles.input}></input>
                 </div>
                 <br/>
                 <div>
                     <label htmlFor="down payment" className={styles.label}>Down payment</label>
-                    $<input type="text" name="down payment"></input>
+                    $<input type="number" name="down payment" className={styles.input}></input>
                 </div>
                 <br/>
-                <div style={{borderTop:'1px solid', width:'310px', paddingTop:'10px'}}>
+                <div style={{borderTop:'1px solid', width:'100%', paddingTop:'20px'}}>
                     <label className={styles.label}>CMHC insurance</label>
                     <div style={{color:'#307db7', fontWeight:'600'}}>$00,000</div>
                 </div>
@@ -24,19 +24,23 @@ const MortgageCalculator = () => {
                     <div style={{color:'#307db7', fontWeight:'600'}}>$000,000</div>
                 </div>
                 <br/>
-                <div style={{borderTop:'1px solid', width:'310px', paddingTop:'10px'}}>
+                <div style={{borderTop:'1px solid', width:'100%', paddingTop:'0px'}}>
+                    
+                </div>
+                <br/>
+                <div>
                     <label htmlFor="amortization" className={styles.label}>Amortization years</label>
-                    <input type="text" name="amortization"></input>
+                    <input type="number" name="amortization" className={styles.input}></input>
                 </div>
                 <br/>
                 <div>
                     <label htmlFor="rate" className={styles.label}>Mortgage rate</label>
-                    <input type="text" name="rate"></input>%
+                    <input type="number" name="rate" className={styles.input}></input>%
                 </div>
                 <br/>
                 <div>
                     <label htmlFor="frequency" className={styles.label}>Payment frequency</label>
-                    <select name='frequency' style={{width:'150px'}}>
+                    <select name='frequency' style={{width:'150px'}} className={styles.input}>
                         <option>Monthly</option>
                         <option>Weekly</option>
                         <option>Bi-weekly</option>
@@ -46,7 +50,7 @@ const MortgageCalculator = () => {
                     </select>
                 </div>
                 <br/>
-                <div style={{borderTop:'1px solid', width:'310px', paddingTop:'10px'}}>
+                <div style={{borderTop:'1px solid', width:'100%', paddingTop:'20px'}}>
                     <label className={styles.label}>Mortgage payment</label>
                     <div style={{color:'#307db7', fontWeight:'600'}}>$0,000</div>
                 </div>
