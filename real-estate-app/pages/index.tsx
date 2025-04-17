@@ -47,11 +47,12 @@ const HomePage = () => {
           <LoginButton />
         </header>
         
-
-        <div className={styles.websiteNameContainer}>
-          <h1 className={styles.title}>Realest Estate</h1>
+        <div className={styles.backgroundPicContainer}>
+          <img src="/images/house-background.jpeg" />
+          <div className={styles.websiteNameContainer}>
+            <h1 className={styles.title}>Realest Estate</h1>
+          </div>
         </div>
-        
 
         <div className={styles.searchContainer} ref={searchRef}>
           <input

@@ -30,7 +30,7 @@
 .header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   position: fixed;
   top: 0;
@@ -47,6 +47,17 @@
   cursor: pointer;
 }
 
+.backgroundPicContainer {
+  overflow: clip;
+  height: 230px;
+  width: 100vw;
+  /* margin-top: -30px; */
+  top: 0px;
+  align-items: center;
+  justify-content: center;
+  margin-top: -100px
+}
+
 /* Website Name Background (Moved Up Higher) */
 .websiteNameContainer {
   width: 50%;
@@ -57,7 +68,11 @@
   background: rgba(162, 162, 162, 0.2);
   /* background: #47a4ec; */
   border-radius: 10px;
-  margin-top: 0px;  /* Moved Up */
+  margin-top: -400px;  /* Moved Up */
+  z-index: 500;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Search Bar (Much Wider) */
@@ -68,8 +83,9 @@
   background: rgba(255, 255, 255, 0.2);
   padding: 15px;
   border-radius: 10px;
-  margin: 50px 0;
+  margin: 20px 0;
   width: 600px; /* Increased Width */
+  top: 0px;
 }
 
 /* Search Input */
@@ -188,7 +204,7 @@
   background: rgba(255, 255, 255, 0.9);
   color: black;
   border-radius: 8px;
-  margin-top: 8px;
+  /* margin-top: 8px; */
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   z-index: 99;
