@@ -1,6 +1,7 @@
 :root {
-  --background: #dadada;
+  --background: linear-gradient(to bottom, #dadada, #c3c3c3, #a7a7a7, #919191);;
   --foreground: #171717;
+  height: 100vh;
 }
 
 html,
