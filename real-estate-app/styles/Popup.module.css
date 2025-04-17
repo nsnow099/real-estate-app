@@ -106,7 +106,7 @@
 
 /* Contact Agent button */
 .contactButton {
-  background-color: #007bff;
+  background-color: #47A4EC;
   color: white;
   padding: 12px 20px;
   font-size: 1.1rem;
@@ -115,6 +115,7 @@
   cursor: pointer;
   width: 100%;
   margin-top: 15px;
+  font-weight: bolder;
 }
 
 .contactButton:hover {
