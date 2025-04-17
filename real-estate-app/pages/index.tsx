@@ -14,6 +14,7 @@ const HomePage = () => {
     Cities: ["Toronto", "Ottawa"],
     "Street Addresses": ["123 Elm Street", "456 Maple Avenue"],
     Realtors: ["John Doe", "Jane Smith"],
+    Tools: ["Mortgage Calculator"]
   };
 
   const handleClickOutside = (event: MouseEvent) => {

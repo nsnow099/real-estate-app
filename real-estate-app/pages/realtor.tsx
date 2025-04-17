@@ -77,79 +77,75 @@ const Realtor: React.FC = () => {
         <LoginButton />
       </header>
 
-      <h1 className={styles.title}>Discover Agents</h1>
-
-      <div className={styles.searchContainer}>
-        <input
-          type="text"
-          placeholder="City or Province..."
-          className={styles.searchBox1}
-        />
-        <input
-          type="text"
-          placeholder="Agent Name..."
-          className={styles.searchBox2}
-        />
-        <img
-          src="/images/searchicon.jpg"
-          alt="Search Icon"
-          width={48}
-          height={48}
-          className={styles.searchIcon}
-        />
-      </div>
-
-      <div className={styles.filtersContainer}>
-        <div className={styles.dropdownWrapper}>
-          <select
-            className={styles.filterButtonRating}
-            value={rating}
-            onChange={(e) => setRating(e.target.value)}
-          >
-            <option value="">Ratings</option>
-            <option value="5stars">♦♦♦♦♦</option>
-            <option value="4stars">♦♦♦♦</option>
-            <option value="3stars">♦♦♦</option>
-            <option value="2stars">♦♦</option>
-            <option value="1stars">♦</option>
-          </select>
+      {/* <h1 className={styles.title}>Discover Agents</h1> */}
+      <div className={styles.searchAndFilters}>
+        <div className={styles.searchContainer}>
+          <input
+            type="text"
+            placeholder="Search by name or location"
+            className={styles.searchBox1}
+          />
+          <img
+            src="/images/searchicon.jpg"
+            alt="Search Icon"
+            width={48}
+            height={48}
+            className={styles.searchIcon}
+          />
         </div>
 
-        <div className={styles.dropdownWrapper}>
-          <select
-            className={styles.filterButtonSpecialty}
-            value={specialty}
-            onChange={(e) => setSpecialty(e.target.value)}
-          >
-            <option value="">Select Specialty</option>
-            <option value="residential">Residential</option>
-            <option value="commercial">Commercial</option>
-            <option value="luxury">Luxury</option>
-          </select>
-        </div>
+        <div className={styles.filtersContainer}>
+          <div className={styles.dropdownWrapper}>
+            <select
+              className={styles.filterButtonRating}
+              value={rating}
+              onChange={(e) => setRating(e.target.value)}
+            >
+              <option value="">Rating</option>
+              <option value="5stars">♦♦♦♦♦</option>
+              <option value="4stars">♦♦♦♦</option>
+              <option value="3stars">♦♦♦</option>
+              <option value="2stars">♦♦</option>
+              <option value="1stars">♦</option>
+            </select>
+          </div>
 
-        <div className={styles.dropdownWrapper}>
-          <select
-            className={styles.filterButtonLanguage}
-            value={language}
-            onChange={(e) => setLanguage(e.target.value)}
-          >
-            <option value="">Select Language</option>
-            <option value="english">English</option>
-            <option value="french">French</option>
-          </select>
-        </div>
+          <div className={styles.dropdownWrapper}>
+            <select
+              className={styles.filterButtonSpecialty}
+              value={specialty}
+              onChange={(e) => setSpecialty(e.target.value)}
+            >
+              <option value="">Specialty</option>
+              <option value="residential">Residential</option>
+              <option value="commercial">Commercial</option>
+              <option value="luxury">Luxury</option>
+            </select>
+          </div>
 
-        <button
-          className={styles.clearFiltersButton}
-          onClick={() => {
-            setRating("");
-            setSpecialty("");
-            setLanguage("");
-          }}
-        >
-          Clear All Filters
-        </button>
+          <div className={styles.dropdownWrapper}>
+            <select
+              className={styles.filterButtonLanguage}
+              value={language}
+              onChange={(e) => setLanguage(e.target.value)}
+            >
+              <option value="">Language</option>
+              <option value="english">English</option>
+              <option value="french">French</option>
+            </select>
+          </div>
+
+          <button
+            className={styles.clearFiltersButton}
+            onClick={() => {
+              setRating("");
+              setSpecialty("");
+              setLanguage("");
+            }}
+          >
+            Clear All Filters
+          </button>
+        </div>
       </div>
 
       <h1 className={styles.agentCount}>100 agents found</h1>

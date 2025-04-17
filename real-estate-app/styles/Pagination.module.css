@@ -28,6 +28,7 @@
 
   .arrow:disabled:hover {
     box-shadow: none;
+    cursor: auto;
   }
   
   .pageNumber:hover, .arrow:hover {
